@@ -8,6 +8,16 @@
 	<body>
 		<div>
 			<?php
+				$op = "+";
+				switch ($op) {
+					case 'value':
+						# code...
+						break;
+					
+					default:
+						# code...
+						break;
+				}
 			?>
 		</div>
 	</body>
