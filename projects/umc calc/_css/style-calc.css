@@ -1,0 +1,21 @@
+*{
+	font-family: verdana;
+}
+div{
+	margin: 150px auto auto auto;
+	border: 1px solid #000;
+	border-radius: 5px;
+	width: 400px;
+	height: 250px;
+	padding: 5px;
+}
+
+fieldset{
+	border-radius: 5px;
+}
+
+input{
+	border-radius: 4px;
+	text-indent: 3px;
+	padding: 4px; 
+}
