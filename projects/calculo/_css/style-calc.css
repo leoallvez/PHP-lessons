@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@font-face{
+	font-family: 'font';
+	src: url("../_fonts/Varela-Regular.ttf");
+}
+*{
+	margin: 0;
+	padding: auto;
+}
+
+body{
+	font-family: 'font', serif;
+	font-size: 100%;
+	color: #fff;
+}
+
+h2{
+	text-indent: 10px;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+	font-size: 1.5em;
+}
+#bet{
+	font-size: 0.7em;
+}
+div{
+	margin: 5% auto;
+	width: 30%;
+	min-width: 370px;
+	height: 30%;
+	min-height: 460px;
+	padding: 1%;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+	display: block;
+	background-image: linear-gradient(to bottom, #4682B4, #4169E1);
+	border-radius: 5px;
+}
+
+p, a{
+	margin-left: 4%;
+}
+
+fieldset{
+	margin: 1%;
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 5px;
+}
+
+input{
+	font-size: 99%;
+	margin-bottom: 4%;
+	margin-top: 4%;
+	padding: 2%; 
+	border: 2px solid #fff;
+	width: 17%;
+	height: 15%;
+	border-radius: 5px;
+}
+/*Pseudo classe de invalido*/
+input:invalid{
+	border: 2px solid red;
+} 
+/*Pseudo classe de valido*/
+input:valid{
+	border-color: #000;
+} 
+
+input.bot{
+	font-size: 100%;
+	border: 2px solid #fff;
+	text-indent: 0px;
+	padding: 1%;
+	margin: 2%;
+	width: 20%;
+	min-height: 30px;
+	transition: background-color 1s;
+	background-color:  #4169E1;
+	color: #fff;
+	border-radius: 5px;
+}
+table{
+	width: 100%;
+	height: auto;
+	border: 0px;
+}
+td, th{
+
+	border: 2px solid #fff;
+	padding: 1%;
+	border-radius: 5px;
+	min-width: 10%;
+}
+#d{
+	text-align: center;
+}
+
+.bot:hover{
+	background: #4682B4;
+	border: 1px solid #ffffff;
+}
+.bot:active{
+	font-size: 1.1em;
+}
+
