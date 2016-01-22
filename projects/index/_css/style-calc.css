@@ -6,7 +6,6 @@
 *{
 	margin: 0;
 	padding: auto;
-	transition: background-color, margin, width, height 0.5s;
 }
 
 body{
@@ -19,17 +18,18 @@ h2{
 	text-indent: 10px;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 	font-size: 1.5em;
+	transition: background-color, 1s;
 }
 #bet{
 	font-size: 0.7em;
 }
 div{
-	margin: 8% auto;
+	margin: 6% auto;
 	width: 30%;
 	min-width: 320px;
 	height: 30%;
 	min-height: 380px;
-	padding: 1%;
+	padding: 3%;
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 	display: block;
 	background-image: linear-gradient(to bottom, #4682B4, #4169E1);
@@ -45,17 +45,21 @@ fieldset{
 	border: 2px solid #fff;
 	color: #fff;
 	border-radius: 5px;
+	transition: background-color, margin, width, height border 1.2s;
 }
 
 
 input{
+
 	font-size: 95%;
-	margin-bottom: 4%;
+	margin-top: 1%;
+	margin-bottom: 5%;
 	padding: 2%; 
 	border: 2px solid #fff;
 	width: 20%;
 	height: 15%;
 	border-radius: 5px;
+	transition: background-color 1s;
 }
 /*Pseudo classe de invalido*/
 input:invalid{
@@ -71,7 +75,7 @@ input:focus{
 }
 
 
-input.bot{
+input.bot, a{
 	font-size: 90%;
 	border: 2px solid #fff;
 	text-indent: 0px;
@@ -79,7 +83,7 @@ input.bot{
 	margin: 2%;
 	width: 20%;
 	min-height: 30px;
-	transition: background-color 1s;
+	transition: background-color, margin, width, height border 1.2s;
 	background-color:  #4169E1;
 	color: #fff;
 	border-radius: 5px;
@@ -94,6 +98,7 @@ input.bot:active{
 	font-size: 1.1em;
 }
 table{
+	margin: 1%;
 	width: 100%;
 	height: auto;
 	border: 0px;

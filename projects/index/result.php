@@ -26,7 +26,7 @@
 					$s = "Reprovado";
 				}
 			?>
-			<table border='2'> 
+			<table> 
 				<th colspan='4'>Resultados:</th>
 				<tr>
 			    	<td>Nota M1: </td> 
