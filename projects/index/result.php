@@ -55,7 +55,7 @@
 			</table>
 
 			</br>
-			<a href="index.php">Voltar</a>
+			<a href="javascript:history.go(-1)">Voltar</a>
 		</div>
 	</body>
 </html>

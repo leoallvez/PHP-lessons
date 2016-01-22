@@ -6,6 +6,7 @@
 *{
 	margin: 0;
 	padding: auto;
+	transition: background-color, margin, width, height 0.5s;
 }
 
 body{
@@ -23,11 +24,11 @@ h2{
 	font-size: 0.7em;
 }
 div{
-	margin: 5% auto;
+	margin: 8% auto;
 	width: 30%;
 	min-width: 320px;
 	height: 30%;
-	min-height: 460px;
+	min-height: 380px;
 	padding: 1%;
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 	display: block;
@@ -36,7 +37,7 @@ div{
 }
 
 p, a{
-	margin-left: 4%;
+	margin-left: 2%;
 }
 
 fieldset{
