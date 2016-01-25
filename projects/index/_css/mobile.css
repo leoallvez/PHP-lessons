@@ -11,11 +11,11 @@ div{
 	margin: 8% auto;
 	width: 100%;
 	height: 100%;
-	background-image: linear-gradient(to bottom, #4682B4, #4169E1);
 	border-radius: 3px;
 	display: block;
 	padding: 2%;
 	transition: background-color, margin, width, height border 1.2s;
+	text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
 }
 
 p, a{
@@ -24,7 +24,6 @@ p, a{
 
 fieldset{
 	margin: 1% 6%;
-	border: 2px solid #fff;
 	color: #fff;
 	border-radius: 3px;
 	transition: background-color, margin, width, height border 1.2s;
@@ -61,16 +60,13 @@ fieldset{
 
 input.bot, a{
 	font-size: 100%;
-	border: 2px solid #fff;
 	text-indent: 0px;
 	padding: 1%;
 	margin-left: 30%;
 	margin: 1% 6%;
 	width: 20%;
 	min-height: 30px;
-	transition: background-color, margin, width, height border 1.2s;
 	background-color:  #4169E1;
-	color: #fff;
 	border-radius: 3px;
 }
 

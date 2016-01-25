@@ -15,6 +15,7 @@ body{
 }
 
 h2{
+
 	text-indent: 10px;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 	font-size: 1.5em;
@@ -24,6 +25,7 @@ h2{
 	font-size: 0.7em;
 }
 div{
+	border: 1px solid #00FFFF;
 	margin: 6% auto;
 	width: 30%;
 	min-width: 320px;
@@ -32,7 +34,7 @@ div{
 	padding: 3%;
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 	display: block;
-	background-image: linear-gradient(to bottom, #4682B4, #4169E1);
+background-image: linear-gradient(to bottom,#008B8B,rgb(0,128,128));
 	border-radius: 3px;
 	transition: background-color, margin, width, height border 1.2s;
 }
@@ -43,15 +45,16 @@ p, a{
 
 fieldset{
 	margin: 1%;
-	border: 2px solid #fff;
+	border: 1px solid #00FFFF;
 	color: #fff;
 	border-radius: 5px;
 	transition: background-color, margin, width, height border 1.2s;
+	background-image: linear-gradient(to bottom,#008B8B,#20B2AA);
 }
 
 /*input number m1*/
 .a{
-
+	border: 1px solid #00FFFF;
 	font-size: 95%;
 	margin-top: 1%;
 	margin-bottom: 5%;
@@ -64,7 +67,7 @@ fieldset{
 }
 /*input number dicliplina e integrada*/
 .b{
-
+	border: 1px solid #00FFFF;
 	font-size: 95%;
 	margin-top: 5%;
 	margin-bottom: 5%;
@@ -77,7 +80,7 @@ fieldset{
 }
 /*Pseudo classe de invalido*/
 input:invalid{
-	border: 2px solid red;
+	border: 2px solid #FF6347;
 } 
 /*Pseudo classe de valido*/
 input:valid{
@@ -85,26 +88,27 @@ input:valid{
 } 
 
 input:focus{
-	border: 2px solid #191970;
+	border: 2px solid #00FFFF;
+	background: #008B8B;
+	color: #fff;
 }
 
 input.bot, a{
 	font-size: 90%;
-	border: 2px solid #fff;
+	border: 1px solid #00FFFF;
 	text-indent: 0px;
 	padding: 1%;
 	margin: 2%;
 	width: 20%;
 	min-height: 30px;
-	transition: background-color, margin, width, height border 1.2s;
-	background-color:  #4169E1;
+	background-image: linear-gradient(to bottom,#008B8B,#20B2AA);
 	color: #fff;
 	border-radius: 3px;
 }
 input.bot:hover{
-	color: #4682B4;;
-	background: #fff;
-	border: 1px solid #ffffff;
+	color: #00FFFF;
+	background-image: linear-gradient(to bottom,#008B8B,#008B8B);
+	border: 2px solid #00FFFF;
 	font-weight: bold;
 }
 input.bot:active{
@@ -118,15 +122,15 @@ table{
 }
 td, th{
 
-	border: 2px solid #fff;
+	border: 1px solid #00FFFF;
 	padding: 1%;
 	border-radius: 3px;
 	min-width: 10%;
 }
 #d{
 	text-align: center;
-	background-color: #fff;
-	color: #4682B4;
+	background-image: linear-gradient(to bottom,#008B8B,#20B2AA);
+	color: #fff;
 }
 
 #g{
@@ -142,9 +146,9 @@ td, th{
 }
 
 
-#escolha{
+.escolha{
 	float: right;
-	min-width: 45%;
+	min-width: 40%;
 }
 
 

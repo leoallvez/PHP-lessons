@@ -22,7 +22,7 @@
 				$st = retornaStatus($me);
 			?>
 			<table> 
-				<th colspan='4'>Resultados:</th>
+				<th colspan='4' id="d">Resultados:</th>
 				<tr>
 			    	<td>Nota M1: </td> 
 			    	<td id='d'><?= $m1; ?></td>

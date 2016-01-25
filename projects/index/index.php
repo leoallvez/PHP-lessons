@@ -31,7 +31,7 @@
 						<fieldset class="escolha">
 							<legend>Prova feita</legend>
 							<label for="drn">não</label>
-							<input type="radio" name="rd" id="drn" value="s" checked>
+							<input type="radio" name="rd" id="drn" value="n" checked/>
 							<label for="dry">sim</label>
 							<input type="radio" name="rd" id="dry" value="s"/>
 						</fieldset>
@@ -45,9 +45,9 @@
 						<fieldset class="escolha">
 								<legend>Prova feita</legend>
 								<label for="irn">não</label>
-								<input type="radio" name="ri" id="irn" value="s" checked>
+								<input type="radio" name="ri" id="irn" value="n" checked/>
 								<label for="iry">sim</label>
-								<input type="radio" name="ri" id="iry" value="n"/>
+								<input type="radio" name="ri" id="iry" value="s"/>
 							</fieldset>
 						</fieldset>
 					</fieldset>
