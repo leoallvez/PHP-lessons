@@ -11,49 +11,43 @@
 		<div id="principal">
 			<h2>Campus Calc<sup><span id="bet"> beta</span></sup></h2>
 			<?php
+				include "_php/functions.php";
 			
-				$m1 = number_format((isset($_GET["m1"])?$_GET["m1"]:0),1);
-				$nd = number_format((isset($_GET["nd"])?$_GET["nd"]:0),1);
-				$ni = number_format((isset($_GET["ni"])?$_GET["ni"]:0),1);
-				$m2 = number_format((($nd * 0.70 )+( $ni * 0.30)),1);
-				$med = (($m1 + ($m2 * 2)) / 3);
-
-				if($med >= 5){
-					$s = "Aprovado";
-				}elseif(($med >= 3) && ($med <= 4.9)){
-					$s = "De Exame";
-				}else{
-					$s = "Reprovado";
-				}
+				$m1 = recebeValor("m1");
+				$nd = recebeValor("nd");
+				$ni = recebeValor("ni");
+				
+				$m2 = calculaM2($nd, $ni);
+				$me = calculaMedia($m1, $m2);
+				$st = retornaStatus($me);
 			?>
 			<table> 
 				<th colspan='4'>Resultados:</th>
 				<tr>
 			    	<td>Nota M1: </td> 
-			    	<td id='d'><?php echo $m1; ?></td>
+			    	<td id='d'><?= $m1; ?></td>
 				</tr>
 				<tr>
 					<td>Nota Diciplina: </td>
-				    <td id='d'><?php echo $nd; ?></td>
+				    <td id='d'><?= $nd; ?></td>
 				</tr>
 				<tr>
 					<td>Nota Integrada: </td>
-					<td id='d'><?php echo $ni; ?></td>
+					<td id='d'><?= $ni; ?></td>
 				</tr>
 				<tr>
 					<td>Nota M2:</td>
-					<td id='d'><?php echo $m2; ?></td>
+					<td id='d'><?= $m2; ?></td>
 				</tr>
 				<tr>
 					<td>Média Final:</td>
-					<td id='d'><?php echo number_format($med,1); ?></td>
+					<td id='d'><?= $me; ?></td>
 				</tr>
 				<tr>
-					<td> Status do Aluno:</td>
-					<td id='d'><?php  echo $s ?></td>
+					<td>Situação do Aluno:</td>
+					<td id='d'><?= $st; ?></td>
 				</tr>
 			</table>
-
 			</br>
 			<a href="javascript:history.go(-1)">Voltar</a>
 		</div>
