@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="_css/style.css" media="screen and (color)">
 		<link rel="stylesheet" href="_css/mobile.css" media="(max-width: 720px)">
-		<script src="_javascript/script.js"></script>
 		<?php include "_php/functions.php"; ?>
 	</head>
 	<body>
@@ -25,8 +24,8 @@
 					<fieldset class="diciplina">
 						<legend>Diciplina</legend>
 						<input type="number" name="nd" value="" id="nnd" list="lista" step="0.1" 
-						min="0" max="10" onFocus="aviso('obs-um',true)" onBlur="aviso('obs-um',false)" 
-						 placeholder="0.0" class="b">
+						min="0" max="10" onClick="aviso('obs-um',true)" onBlur="aviso('obs-um',false)" 
+						 placeholder="0.0" class="b"/>
 						<?php notas(); ?>
 						<fieldset class="escolha">
 							<legend>Prova feita</legend>
@@ -40,23 +39,23 @@
 					<fieldset class="diciplina">
 						<legend>Integrada</legend>
 						<input type="number" name="ni" value="" id="nni" list="lista" step="0.1" 
-						min="0" max="10" onFocus="aviso('obs-dois',true)" onBlur="aviso('obs-dois',false)" 
-						placeholder="0.0" class="b">
+						min="0" max="10" onClick="aviso('obs-dois',true)" onBlur="aviso('obs-dois',false)" 
+						placeholder="0.0" class="b"/>
 						<?php notas(); ?>
 						<fieldset class="escolha">
-								<legend>Prova feita</legend>
-								<label for="irn">não</label>
-								<input type="radio" name="ri" id="irn" value="n" checked/>
-								<label for="iry">sim</label>
-								<input type="radio" name="ri" id="iry" value="s"/>
-							</fieldset>
-							<span id="obs-dois"></span>
+							<legend>Prova feita</legend>
+							<label for="irn">não</label>
+							<input type="radio" name="ri" id="irn" value="n" checked/>
+							<label for="iry">sim</label>
+							<input type="radio" name="ri" id="iry" value="s"/>
 						</fieldset>
+						<span id="obs-dois"></span>
 					</fieldset>
 				</fieldset>
-				<input type="submit" class="bot" value="Calcular" onClick="zera()">
-				<input type="reset"  class="bot" value="Limpar" id="a">
+				<input type="submit" class="bot" value="Calcular" onClick="zera()"/>
+				<input type="reset"  class="bot" value="Limpar" id="a"/>
 			</form>
 		</div>
+		<script src="_javascript/script.js"></script>
 	</body>
 </html>

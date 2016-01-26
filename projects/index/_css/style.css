@@ -98,7 +98,7 @@ input:focus{
 }
 
 /*Estilos de submit e links*/
-.bot{
+input.bot, a.bot{
 	font-size: 90%;
 	border: 1px solid #00FFFF;
 	text-indent: 0px;
