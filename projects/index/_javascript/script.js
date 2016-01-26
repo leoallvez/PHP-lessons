@@ -1,15 +1,4 @@
-function limpa(id){
-	document.getElementById(id).value= " ";
-}
-
-function zera(id){
-	var s = document.getElementById(id).value;
-	if(s == ""){
-		document.getElementById(id).value = "0";
-	}
-}
-
-function zeraTudo(){
+function zera(){
 	var m1 = document.getElementById("nm1").value;
 	var nd = document.getElementById("nnd").value;
 	var ni = document.getElementById("nni").value;
@@ -23,4 +12,12 @@ function zeraTudo(){
 	if(ni == ""){
 		document.getElementById("nni").value = "0";
 	}		
+}
+
+function aviso(spanId, valor){
+	if(valor == true){
+		document.getElementById(spanId).innerHTML = "<p id='avi'>*nota inteira sem porcentagem</p>";
+	}else{
+		document.getElementById(spanId).innerHTML = "";
+	}
 }

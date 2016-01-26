@@ -3,15 +3,16 @@
 	font-family: 'font';
 	src: url("../_fonts/Varela-Regular.ttf");
 }
+
 *{
 	margin: 0;
 	padding: auto;
+	color: #fff;
 }
 
 body{
 	font-family: 'font', serif;
 	font-size: 100%;
-	color: #fff;
 }
 
 h2{
@@ -21,22 +22,24 @@ h2{
 	font-size: 1.5em;
 	transition: background-color, 1s;
 }
-#bet{
+
+span#bet{
 	font-size: 0.7em;
 }
+
 div{
-	border: 1px solid #00FFFF;
 	margin: 6% auto;
 	width: 30%;
 	min-width: 320px;
 	height: 30%;
-	min-height: 380px;
+	min-height: 450px;
 	padding: 3%;
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 	display: block;
-background-image: linear-gradient(to bottom,#008B8B,rgb(0,128,128));
+	background-image: linear-gradient(to bottom,#008B8B,rgb(0,128,128));
 	border-radius: 3px;
 	transition: background-color, margin, width, height border 1.2s;
+		color: #fff;
 }
 
 p, a{
@@ -51,9 +54,9 @@ fieldset{
 	transition: background-color, margin, width, height border 1.2s;
 	background-image: linear-gradient(to bottom,#008B8B,#20B2AA);
 }
-
 /*input number m1*/
-.a{
+input.a{
+	color: #000;
 	border: 1px solid #00FFFF;
 	font-size: 95%;
 	margin-top: 1%;
@@ -66,7 +69,8 @@ fieldset{
 	transition: background-color 1s;
 }
 /*input number dicliplina e integrada*/
-.b{
+input.b{
+	color: #000;
 	border: 1px solid #00FFFF;
 	font-size: 95%;
 	margin-top: 5%;
@@ -93,7 +97,8 @@ input:focus{
 	color: #fff;
 }
 
-input.bot, a{
+/*Estilos de submit e links*/
+.bot{
 	font-size: 90%;
 	border: 1px solid #00FFFF;
 	text-indent: 0px;
@@ -104,22 +109,31 @@ input.bot, a{
 	background-image: linear-gradient(to bottom,#008B8B,#20B2AA);
 	color: #fff;
 	border-radius: 3px;
+	text-decoration: none;
 }
-input.bot:hover{
+
+.bot:hover{
 	color: #00FFFF;
 	background-image: linear-gradient(to bottom,#008B8B,#008B8B);
-	border: 2px solid #00FFFF;
-	font-weight: bold;
 }
-input.bot:active{
+
+.bot:active{
 	font-size: 1.1em;
 }
+
+#vot{
+	margin-top: 3%;
+	margin: 2%;
+}
+
+
 table{
 	margin: 1%;
 	width: 100%;
 	height: auto;
 	border: 0px;
 }
+
 td, th{
 
 	border: 1px solid #00FFFF;
@@ -127,39 +141,37 @@ td, th{
 	border-radius: 3px;
 	min-width: 10%;
 }
-#d{
+/*lacuna direita da tabela*/
+td#d{
 	text-align: center;
-	background-image: linear-gradient(to bottom,#008B8B,#20B2AA);
 	color: #fff;
+	background-image: linear-gradient(to bottom,#008B8B,#20B2AA);
+}
+/*lacuna esquerda da tabela*/
+td#e{
+	color: #00FFFF;
 }
 
-#g{
-	color: #006400;
-}
-
-#y{
-	color: #B8860B;
-}
-
-#r{
-	color: #FF0000;
-}
-
-
-.escolha{
+fieldset.escolha{
 	float: right;
-	min-width: 40%;
+	min-width: 52%;
+	min-height: 10%;
 }
 
-
-
-
-.diciplina{
+fieldset.diciplina{
 	margin: 2%;
 }
 
-.diciplina label{
+fieldset.diciplina label{
 	margin-left: 7%;
 }
 
+/*paragrafo dentro de um função javascript*/
+p#avi{
+	margin-left: 0%;
+	margin-top: 0%;
+	font-size: 80%;
+	position: relative;
+	display: block;
+}
 
