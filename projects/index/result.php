@@ -8,8 +8,8 @@
 		<link rel='stylesheet' href='_css/mobile.css' media='(max-width: 720px)'>
 	</head>
 	<body>
+		<?php include "_php/header.php";?>
 		<div id='principal'>
-			<h2>CampusCalc<sup><span id='bet'> beta</span></sup></h2>
 			<?php
 				include '_php/functions.php';
 			

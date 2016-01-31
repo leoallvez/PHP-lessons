@@ -12,7 +12,7 @@
 		<?php include "_php/header.php";?>
 		<div id="principal">
 			<form method="get" action="result.php">
-				<h2>CampusCalc<sup><span id="bet"> beta</span></sup></h2>
+				
 				<fieldset>
 					<legend><strong>M1</strong></legend>
 					<label for="nm1">Nota M1:</label></br>

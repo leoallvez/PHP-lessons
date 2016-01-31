@@ -5,7 +5,7 @@ h2{
 }
 
 div{
-	margin: 8% auto;
+	margin: 15% auto;
 	width: 100%;
 	height: 100%;
 	border-radius: 3px;
@@ -30,17 +30,21 @@ input.b{
 	margin-top: 8%;
 	width: 22%;
 }
-/*Estilos de submit e links*/
-.bot{
+/*style of submit and links*/
+input.bot{
 	font-size: 90%;
 	text-indent: 0px;
 	padding: 1%;
-	margin-left: 30%;
-	margin: 1% 6%;
+	margin: 100%;
+	margin: 3% 6%;
 	width: 20%;
 	min-height: 30px;
-	background-color:  #4169E1;
+	background-color: #4169E1;
 	border-radius: 3px;
+}
+/*the last input of the class .bot*/
+input.bot:last-child{
+	margin: 3% 1%;
 }
 
 #vot{
@@ -56,7 +60,6 @@ table{
 fieldset.escolha{
 	float: right;
 	min-width: 50%;
-	/*position: relative;*/
 	margin: 3% 1%;
 	display: inline;
 }

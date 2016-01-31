@@ -16,11 +16,11 @@ body{
 }
 
 h2{
-
 	text-indent: 10px;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 	font-size: 1.5em;
 	transition: background-color, 1s;
+	float: left;
 }
 
 span#bet{
@@ -28,7 +28,7 @@ span#bet{
 }
 
 div{
-	margin: 6% auto;
+	margin: 5% auto;
 	width: 30%;
 	min-width: 320px;
 	height: 30%;
@@ -118,7 +118,7 @@ input.bot, a.bot{
 }
 
 .bot:active{
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 #vot{
@@ -192,17 +192,15 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  border-bottom: 1px solid #ccc;
-  background: #ECECEC;
+  background: #008B8B;
+  opacity: 0.9;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
 
 header h1 {
   padding: 10px 0 0 10px;
 }
 
-header h1 a {
-  color: #333;
-}
 
 header ul {
   padding: 15px 10px 0 0;
@@ -210,16 +208,19 @@ header ul {
 
 header li a {
   display: block;
-  padding: 0 10px;
-  color: #999;
-  font-size: 16px;
+  padding: 0 15px;
+  color: #fff;
   line-height: 30px;
   text-decoration: none;
   transition: all 300ms ease;
 }
 
+header li a:active{
+	font-size: 1.5em;
+}
+
 header li a:hover {
-  color: #333;
+  color: #00FFFF;
 }
 
 input#control-nav {
@@ -229,7 +230,7 @@ input#control-nav {
   opacity: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 720px) {
   header nav {
     position: fixed;
     top: 0;
@@ -240,10 +241,7 @@ input#control-nav {
     background: #fff;
     overflow-x: auto;
     z-index: 2; /*Coloca em segundo plano*/
-    -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
-    -webkit-transform: translate(100%, 0);
-    -ms-transform: translate(100%, 0);
     transform: translate(100%, 0);
   }
 
@@ -255,14 +253,22 @@ input#control-nav {
     width: 100%;
     border: solid #ccc;
     border-width: 0 0 1px;
+
   }
+
+  header ul.list-auto li:hover {
+  	border: 2px solid #00FFFF;
+
+  }
+
 
   header li a {
     padding: 15px 10px;
+    color: #000;
   }
 
-  header li a:hover {
-    background-color: #ccc;
+  header li:hover {
+    background-color: #20B2AA;
   }
 
   .control-nav { /* label icon */
@@ -270,22 +276,32 @@ input#control-nav {
     right: 20px;
     top: 20px;
     display: block;
-    width: 30px;
+    width: 8%;
     padding: 5px 0;
-    border: solid #000;
+    border: solid #FFF;
     border-width: 3px 0;
     z-index: 1;
   }
 
-  .control-nav:before {
-    content: "";
-    display: block;
-    height: 3px;
-    background: #333;
-    z-index: 3;
+  .control-nav:hover{
+  	border-color: #00FFFF;
   }
 
+  .control-nav p{
+    content: "";
+    display: block;
+    right: 6%;
+    width: 99%;
+    height: 3px;
+    background: #FFF;
+    z-index: 3;
+    position: relative;
+  }
 
+   .control-nav:hover p{
+   		background-color: 
+   		#00FFFF
+    }
   .control-nav-close {
     position: fixed; /* label layer */
     right: 0;
@@ -295,17 +311,12 @@ input#control-nav {
     display: block;
     z-index: 2;
     background: rgba(0,0,0,0.4);
-    -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
-    -webkit-transform: translate(100%, 0);
-    -ms-transform: translate(100%, 0);
     transform: translate(100%, 0);
   }
 
   input#control-nav:checked ~ nav,
   input#control-nav:checked ~ .control-nav-close {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 }
