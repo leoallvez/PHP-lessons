@@ -9,6 +9,7 @@
 		<?php include "_php/functions.php"; ?>
 	</head>
 	<body>
+		<?php include "_php/header.php";?>
 		<div id="principal">
 			<form method="get" action="result.php">
 				<h2>CampusCalc<sup><span id="bet"> beta</span></sup></h2>

@@ -39,7 +39,6 @@ div{
 	background-image: linear-gradient(to bottom,#008B8B,rgb(0,128,128));
 	border-radius: 3px;
 	transition: background-color, margin, width, height border 1.2s;
-		color: #fff;
 }
 
 p, a{
@@ -51,8 +50,8 @@ fieldset{
 	border: 1px solid #00FFFF;
 	color: #fff;
 	border-radius: 5px;
-	transition: background-color, margin, width, height border 1.2s;
 	background-image: linear-gradient(to bottom,#008B8B,#20B2AA);
+	z-index: 0;
 }
 /*input number m1*/
 input.a{
@@ -68,6 +67,7 @@ input.a{
 	border-radius: 3px;
 	transition: background-color 1s;
 }
+
 /*input number dicliplina e integrada*/
 input.b{
 	color: #000;
@@ -173,5 +173,140 @@ p#avi{
 	font-size: 80%;
 	position: relative;
 	display: block;
+}
+
+li { 
+  width: 100%; 
+  float: left; 
+  display: block;
+  width: auto;
+  position: relative; 
+}
+
+.float-l { float: left; }
+.float-r { float: right; }
+
+header {
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #ccc;
+  background: #ECECEC;
+}
+
+header h1 {
+  padding: 10px 0 0 10px;
+}
+
+header h1 a {
+  color: #333;
+}
+
+header ul {
+  padding: 15px 10px 0 0;
+}
+
+header li a {
+  display: block;
+  padding: 0 10px;
+  color: #999;
+  font-size: 16px;
+  line-height: 30px;
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+
+header li a:hover {
+  color: #333;
+}
+
+input#control-nav {
+  display: none; /*Oculta o check box*/
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+@media screen and (max-width: 767px) {
+  header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    border-left: 1px solid #ccc;
+    background: #fff;
+    overflow-x: auto;
+    z-index: 2; /*Coloca em segundo plano*/
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+
+  header ul.list-auto {
+    padding: 0;
+  }
+
+  header ul.list-auto li {
+    width: 100%;
+    border: solid #ccc;
+    border-width: 0 0 1px;
+  }
+
+  header li a {
+    padding: 15px 10px;
+  }
+
+  header li a:hover {
+    background-color: #ccc;
+  }
+
+  .control-nav { /* label icon */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: block;
+    width: 30px;
+    padding: 5px 0;
+    border: solid #000;
+    border-width: 3px 0;
+    z-index: 1;
+  }
+
+  .control-nav:before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #333;
+    z-index: 3;
+  }
+
+
+  .control-nav-close {
+    position: fixed; /* label layer */
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 2;
+    background: rgba(0,0,0,0.4);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+
+  input#control-nav:checked ~ nav,
+  input#control-nav:checked ~ .control-nav-close {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
 
