@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>CampusCalc | Início</title>
+		<title>Prova Feita | Início</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="_css/style.css" media="screen and (color)">
@@ -29,7 +29,7 @@
 						 placeholder="0.0" class="b"/>
 						<?php notas(); ?>
 						<fieldset class="escolha">
-							<legend>Prova feita</legend>
+							<legend>Realizada</legend>
 							<label for="drn">não</label>
 							<input type="radio" name="rd" id="drn" value="n" checked/>
 							<label for="dry">sim</label>
@@ -44,7 +44,7 @@
 						placeholder="0.0" class="b"/>
 						<?php notas(); ?>
 						<fieldset class="escolha">
-							<legend>Prova feita</legend>
+							<legend>Realizada</legend>
 							<label for="irn">não</label>
 							<input type="radio" name="ri" id="irn" value="n" checked/>
 							<label for="iry">sim</label>

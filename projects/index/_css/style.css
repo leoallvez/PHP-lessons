@@ -38,7 +38,7 @@ div{
 	display: block;
 	background-image: linear-gradient(to bottom,#008B8B,rgb(0,128,128));
 	border-radius: 3px;
-	transition: background-color, margin, width, height border 1.2s;
+	transition: all 1.2s;
 }
 
 p, a{
@@ -65,7 +65,7 @@ input.a{
 	width: 20%;
 	height: 15%;
 	border-radius: 3px;
-	transition: background-color 1s;
+	transition: all 1s;
 }
 
 /*input number dicliplina e integrada*/
@@ -80,7 +80,7 @@ input.b{
 	width: 23%;
 	height: 15%;
 	border-radius: 3px;
-	transition: background-color 1s;
+	transition: all 1s;
 }
 /*Pseudo classe de invalido*/
 input:invalid{
@@ -110,6 +110,7 @@ input.bot, a.bot{
 	color: #fff;
 	border-radius: 3px;
 	text-decoration: none;
+  transition: all 0.3s;
 }
 
 .bot:hover{
@@ -195,6 +196,7 @@ header {
   background: #008B8B;
   opacity: 0.9;
   box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+  transition: all 1s;
 }
 
 header h1 {
@@ -212,7 +214,7 @@ header li a {
   color: #fff;
   line-height: 30px;
   text-decoration: none;
-  transition: all 300ms ease;
+  transition: all 1s;
 }
 
 header li a:active{
@@ -258,6 +260,17 @@ input#control-nav {
 
   header ul.list-auto li:hover {
   	border: 2px solid #00FFFF;
+    color: #FFF;
+
+  }
+
+  header ul.list-auto li:hover a{
+    color: #FFF;
+
+  }
+
+  header ul.list-auto li:active a{
+    color: #00FFFF;
 
   }
 
@@ -299,8 +312,7 @@ input#control-nav {
   }
 
    .control-nav:hover p{
-   		background-color: 
-   		#00FFFF
+   		background-color: #00FFFF;
     }
   .control-nav-close {
     position: fixed; /* label layer */
