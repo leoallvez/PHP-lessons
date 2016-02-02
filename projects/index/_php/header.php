@@ -1,6 +1,6 @@
 <header>
   <h1 class="float-l">
-    <h2>Prova Feita<sup><span id="bet"> beta</span></sup></h2>
+    <h2>CampusCalc<sup><span id="bet"> beta</span></sup></h2>
   </h1>   
   <input type="checkbox" id="control-nav" />
   <label for="control-nav" class="control-nav"><p></p></label>
