@@ -28,11 +28,11 @@ span#bet{
 }
 
 div{
-	margin: 5% auto;
+	margin: 5% auto 1%;
 	width: 30%;
 	min-width: 320px;
 	height: 30%;
-	min-height: 450px;
+	min-height: 400px;
 	padding: 3%;
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 	display: block;
@@ -331,5 +331,12 @@ input#control-nav {
   input#control-nav:checked ~ .control-nav-close {
     transform: translate(0, 0);
   }
+}
+
+#footer p, a{
+  font-size: 0.9em;
+  color: #20B2AA;
+  text-align: center;
+  float: top;
 }
 

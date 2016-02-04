@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>CampusCalc | Resultados</title>
+		<title>Prova Feita | Resultados</title>
 		<meta charset='UTF-8'>
 		<meta name='viewport' content='width=device-width,initial-scale=1'>
 		<link rel='stylesheet' href='_css/style.css' media='screen and (color)'>
@@ -51,5 +51,6 @@
 			</br>
 			<a class='bot' id='vot'href='javascript:history.go(-1)'>Voltar</a>
 		</div>
+		<?php include "_php/footer.php"; ?>
 	</body>
 </html>

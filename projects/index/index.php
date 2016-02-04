@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>CampusCalc | Início</title>
+		<title>Prova Feita | Início</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="_css/style.css" media="screen and (color)">
@@ -25,7 +25,7 @@
 					<fieldset class="diciplina">
 						<legend>Diciplina</legend>
 						<input type="number" name="nd" value="" id="nnd" list="lista" step="0.1" 
-						min="0" max="10" onClick="aviso('obs-um',true)" onBlur="aviso('obs-um',false)" 
+						min="0" max="10" onFocus="limpa('nnd')" onClick="aviso('obs-um',true)" onBlur="aviso('obs-um',false)" 
 						 placeholder="0.0" class="b"/>
 						<?php notas(); ?>
 						<fieldset class="escolha">
@@ -40,7 +40,7 @@
 					<fieldset class="diciplina">
 						<legend>Integrada</legend>
 						<input type="number" name="ni" value="" id="nni" list="lista" step="0.1" 
-						min="0" max="10" onClick="aviso('obs-dois',true)" onBlur="aviso('obs-dois',false)" 
+						min="0" max="10" onFocus="limpa('nni')" onClick="aviso('obs-dois',true)" onBlur="aviso('obs-dois',false)" 
 						placeholder="0.0" class="b"/>
 						<?php notas(); ?>
 						<fieldset class="escolha">
@@ -57,6 +57,7 @@
 				<input type="reset"  class="bot" value="Limpar" id="a"/>
 			</form>
 		</div>
+		<?php include "_php/footer.php"; ?>
 		<script src="_javascript/script.js"></script>
 	</body>
 </html>

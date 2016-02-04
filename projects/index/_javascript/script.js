@@ -21,3 +21,10 @@ function aviso(spanId, valor){
 		document.getElementById(spanId).innerHTML = "";
 	}
 }
+
+function limpa(id){
+	var v = document.getElementById(id).value;
+	if(v == "0"){
+		document.getElementById(id).value = "";
+	}
+}
