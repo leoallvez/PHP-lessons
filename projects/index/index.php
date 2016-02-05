@@ -4,6 +4,7 @@
 		<title>Prova Feita | Início</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="shortcut icon" href="_img/logo.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="_css/style.css" media="screen and (color)">
 		<link rel="stylesheet" href="_css/mobile.css" media="(max-width: 720px)">
 		<?php include "_php/functions.php"; ?>

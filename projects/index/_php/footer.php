@@ -1,3 +1,3 @@
 <footer id="footer">
-	<p>Copyright&copy; <?php echo date('Y'); ?></br></p>
+	<p>Copyright&copy; <?php echo date('Y'); ?></p>
 </footer>
