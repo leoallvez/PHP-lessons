@@ -13,14 +13,21 @@
 body{
 	font-family: 'font', serif;
 	font-size: 100%;
+  background-image: url('../_img/book-otim.jpg');
+  background-position: fixed;
+  /*valor cover deixa a imagem maior ou igual ao seu box*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 1s;
 }
 
 h2{
 	text-indent: 10px;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 	font-size: 1.5em;
-	transition: background-color, 1s;
+	transition: all 1s;
 	float: left;
+  opacity: 1;
 }
 
 span#bet{
@@ -28,12 +35,12 @@ span#bet{
 }
 
 div{
-	margin: 5% auto 1%;
+	margin: 6% auto 1%;
 	width: 30%;
 	min-width: 320px;
 	height: 30%;
-	min-height: 400px;
-	padding: 3%;
+	min-height: 390px;
+	padding: 2%;
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 	display: block;
 	background-image: linear-gradient(to bottom,#008B8B,rgb(0,128,128));
@@ -214,6 +221,7 @@ header li a {
   color: #fff;
   line-height: 30px;
   text-decoration: none;
+
   transition: all 1s;
 }
 
@@ -333,10 +341,16 @@ input#control-nav {
   }
 }
 
-#footer p{
+#foot{
   font-size: 0.9em;
-  color: #20B2AA;
+  padding: 0%;
   text-align: center;
-  float: top;
+  width: 100%;
+  margin-left: 0;
+  background: #008B8B;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 0px;
+  transition: all 1s;
 }
 

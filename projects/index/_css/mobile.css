@@ -4,6 +4,10 @@ h2{
 	font-size: 1.5em;
 }
 
+body{
+	background-image: none;
+}
+
 div{
 	margin: 15% auto 1%;
 	width: 100%;
@@ -79,6 +83,13 @@ p#avi{
 	font-size: 75%;
 	display: block;
 }
+
+#foot{
+  color: #20B2AA;
+  background: #fff;
+  position: relative;
+}
+
 
 
 
