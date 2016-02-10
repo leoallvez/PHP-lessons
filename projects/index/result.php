@@ -13,40 +13,56 @@
 		<div id='principal'>
 			<?php
 				include '_php/functions.php';
-			
+				include '_php/classe-calculo.php';
+				#Recebendo valor das notas.
 				$m1 = recebeValor('m1');
 				$nd = recebeValor('nd');
 				$ni = recebeValor('ni');
-				
-				$m2 = calculaM2($nd, $ni);
-				$me = calculaMedia($m1, $m2);
-				$st = retornaStatus($me);
+				#Recebendo valor dos radios.
+				$rd = recebeRadio("rd");#diciplina.
+				$ri = recebeRadio("ri");#integrada.
+
+				$n = new Calculo($m1, $nd, $ni);
 			?>
 			<table> 
 				<th colspan='4' id='d'>Resultados:</th>
 				<tr>
 			    	<td id='e'>Nota M1: </td> 
-			    	<td id='d'><?= $m1; ?></td>
+			    	<td id='d'><?= $n->getM1(); ?></td>
 				</tr>
 				<tr>
 					<td id='e'>Nota Diciplina: </td>
-				    <td id='d'><?= $nd; ?></td>
+				    <td id='d'><?= $n->getNd(); ?></td>
 				</tr>
 				<tr>
 					<td id='e'>Nota Integrada: </td>
-					<td id='d'><?= $ni; ?></td>
+					<td id='d'><?= $n->getNi(); ?></td>
 				</tr>
 				<tr>
 					<td id='e'>Nota M2:</td>
-					<td id='d'><?= $m2; ?></td>
+					<td id='d'><?= $n->getM2(); ?></td>
 				</tr>
 				<tr>
 					<td id='e'>Média Final:</td>
-					<td id='d'><?= $me; ?></td>
+					<td id='d'><?= $n->getMedia(); ?></td>
+				</tr>
+				<tr>
+				<?php
+					if($rd == "s" && $ri =="n"){
+						echo "<td id='e'>Nota mínima integrada:</td>;
+							  <td id='d'>".$n->faltaIntegrada()."</td>";
+					}elseif($rd == "n" && $ri =="s"){
+						echo "<td id='e'>Nota mínima diciplina:</td>
+							  <td id='d'>".$n->faltaDiciplina()."</td>";
+					}else{
+						echo "<td id='e'>Nota mínima diciplina e integrada:</td>
+					          <td id='d'>".$n->falta()."</td>";
+					}
+				?>
 				</tr>
 				<tr>
 					<td id='e'>Situação do Aluno:</td>
-					<td id='d'><?= $st; ?></td>
+					<td id='d'><?= $n->status(); ?></td>
 				</tr>
 			</table>
 			</br>

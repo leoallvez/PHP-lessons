@@ -1,7 +1,10 @@
 <?php 
-
 	function recebeValor($v){
 		return number_format((isset($_GET[$v])?$_GET[$v]:0),1);
+	}
+
+	function recebeRadio($v){
+		return isset($_GET[$v])?$_GET[$v]:"n";
 	}
 	
 	function calculaM2($nd, $ni){

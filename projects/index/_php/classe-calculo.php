@@ -29,7 +29,7 @@ class Calculo{
 
 	#essa função calcula a nota da m2.
 	public function calculaM2(){
-		$this->m2 = number_format((($this->nd * 0.70 )+( $this->ni * 0.30)),2);
+		$this->m2 = number_format((($this->nd * 0.70 )+( $this->ni * 0.30)),1);
 	}
 
 	public function getM2(){
@@ -40,7 +40,7 @@ class Calculo{
 		$n = func_num_args(); #quantiade de parametros.
 		$a = func_get_args(); #array dos parametros.
 		if($n == 0){
-			$this->me = number_format((($this->m1 + ($this->m2 * 2)) / 3),2);
+			$this->me = number_format((($this->m1 + ($this->m2 * 2)) / 3),1);
 		}elseif($n = 1){
 			return number_format((($this->m1 + ($a[0] * 2)) / 3),2);		
 		}else{
@@ -58,12 +58,38 @@ class Calculo{
 		$m2 = 0;
 		while(true){
 			$n = $this->calculaMedia($m2);
-			if($n == 5.0){
-				return number_format($m2,2);
+			if($n == 5.00){
+				return number_format($m2,1);
 			}
 			$m2 = $m2 + 0.01;
 		}
 		return $m2;
+	}
+
+	public function faltaIntegrada(){
+		$ni = 0;
+		while(true){
+			$m2 = number_format((($this->nd * 0.70 )+( $ni * 0.30)),2);
+			$me = number_format((($this->m1 + ($m2 * 2)) / 3),2);
+			if($me == 5.00){
+				return number_format($ni,1);
+			}
+			$ni = $ni + 0.01;
+		}
+		return $ni;
+	}
+
+	public function faltaDiciplina(){
+		$nd = 0;
+		while(true){
+			$m2 = number_format((($nd * 0.70 )+( $this->ni * 0.30)),2);
+			$me = number_format((($this->m1 + ($m2 * 2)) / 3),2);
+			if($me == 5.00){
+				return number_format($nd,1);
+			}
+			$nd = $nd + 0.01;
+		}
+		return $nd;
 	}
 
 	public function status(){
@@ -88,10 +114,4 @@ class Calculo{
 	}
 
 }#fim da classe Calculo.
-
-$objeto = new Calculo(2.5,6.3,6.3);
-$objeto->mostra();
-
-
-
 ?>
