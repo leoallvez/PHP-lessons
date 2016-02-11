@@ -58,7 +58,7 @@ class Calculo{
 		$m2 = 0;
 		while(true){
 			$n = $this->calculaMedia($m2);
-			if($n == 5.00){
+			if($n >= 5.00){
 				return number_format($m2,1);
 			}
 			$m2 = $m2 + 0.01;
@@ -71,7 +71,7 @@ class Calculo{
 		while(true){
 			$m2 = number_format((($this->nd * 0.70 )+( $ni * 0.30)),2);
 			$me = number_format((($this->m1 + ($m2 * 2)) / 3),2);
-			if($me == 5.00){
+			if($me >= 5.00){
 				return number_format($ni,1);
 			}
 			$ni = $ni + 0.01;
@@ -84,7 +84,7 @@ class Calculo{
 		while(true){
 			$m2 = number_format((($nd * 0.70 )+( $this->ni * 0.30)),2);
 			$me = number_format((($this->m1 + ($m2 * 2)) / 3),2);
-			if($me == 5.00){
+			if($me >= 5.00){
 				return number_format($nd,1);
 			}
 			$nd = $nd + 0.01;

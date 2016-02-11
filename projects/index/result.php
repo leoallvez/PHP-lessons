@@ -48,11 +48,11 @@
 				</tr>
 				<tr>
 				<?php
-					if($rd == "s" && $ri =="n"){
-						echo "<td id='e'>Nota mínima integrada:</td>;
+					if($rd == "s" && $ri == "n"){
+						echo "<td id='e'>Nota mínima integrada:</td>
 							  <td id='d'>".$n->faltaIntegrada()."</td>";
-					}elseif($rd == "n" && $ri =="s"){
-						echo "<td id='e'>Nota mínima diciplina:</td>
+					}elseif($rd == "n" && $ri == "s"){
+						echo "<td id='e'>Nota mínima diciplina :</td>
 							  <td id='d'>".$n->faltaDiciplina()."</td>";
 					}else{
 						echo "<td id='e'>Nota mínima diciplina e integrada:</td>
