@@ -13,7 +13,7 @@
 		<div id='principal'>
 			<?php
 				include '_php/functions.php';
-				include '_php/classe-calculo.php';
+				include '_php/_class/calculoRegular.php';
 				#Recebendo valor das notas.
 				$m1 = recebeValor('m1');
 				$nd = recebeValor('nd');
@@ -21,8 +21,8 @@
 				#Recebendo valor dos radios.
 				$rd = recebeRadio("rd");#diciplina.
 				$ri = recebeRadio("ri");#integrada.
-
-				$n = new Calculo($m1, $nd, $ni);
+				#Instanciando objeto nota.
+				$n = new calculoRegular($m1, $nd, $ni);
 			?>
 			<table> 
 				<th colspan='4' id='d'>Resultados:</th>
@@ -44,25 +44,25 @@
 				</tr>
 				<tr>
 					<td id='e'>Média Final:</td>
-					<td id='d'><?= $n->getMedia(); ?></td>
+					<td id='d'><?= $n->getMe(); ?></td>
 				</tr>
 				<tr>
 				<?php
 					if($rd == "s" && $ri == "n"){
 						echo "<td id='e'>Nota mínima integrada:</td>
-							  <td id='d'>".$n->faltaIntegrada()."</td>";
+							  <td id='d'>".$n->calcularMinIntegrada()."</td>";
 					}elseif($rd == "n" && $ri == "s"){
 						echo "<td id='e'>Nota mínima diciplina :</td>
-							  <td id='d'>".$n->faltaDiciplina()."</td>";
+							  <td id='d'>".$n->calcularMinDisciplina()."</td>";
 					}else{
 						echo "<td id='e'>Nota mínima diciplina e integrada:</td>
-					          <td id='d'>".$n->falta()."</td>";
+					          <td id='d'>".$n->calcularMin()."</td>";
 					}
 				?>
 				</tr>
 				<tr>
 					<td id='e'>Situação do Aluno:</td>
-					<td id='d'><?= $n->status(); ?></td>
+					<td id='d'><?= $n->mostrarStatus(); ?></td>
 				</tr>
 			</table>
 			</br>

@@ -1,18 +1,14 @@
 <?php
+include "_php/class.calculo.php";
+class CalculoRegular extends Calculo{
 
-class Calculo{
-	protected $m1; #nota m1.
-	protected $nd; #nota dicliplina.
 	protected $ni; #nota integrada.
-	protected $m2; #nota m2.
-	protected $me; #média final.
 
 	public function __construct($m1, $nd, $ni){
-		$this->m1 = $m1;
-		$this->nd = $nd;
+		parent::__construct($m1, $nd); # contrutor classe pai.
 		$this->ni = $ni;
 		$this->calculaM2();
-		$this->calculaMedia();
+		$this->calculaMe();
 	}
 
 	public function getM1(){
@@ -28,15 +24,15 @@ class Calculo{
 	}
 
 	#essa função calcula a nota da m2.
-	public function calculaM2(){
-		$this->m2 = number_format((($this->nd * 0.70 )+( $this->ni * 0.30)),1);
+	public function calcularM2(){
+		$this->m2 = number_format((($this->nd * 0.70 )+( $this->ni * 0.30)),2);
 	}
 
 	public function getM2(){
 		return $this->m2;
 	}
 	# essa função tem uma simula uma sobrecarga de 
-	public function calculaMedia(){
+	public function calcularMe(){
 		$n = func_num_args(); #quantiade de parametros.
 		$a = func_get_args(); #array dos parametros.
 		if($n == 0){
@@ -49,24 +45,25 @@ class Calculo{
 		return 0;
 	}
 
+	public function getMe(){
 
-	public function getMedia(){
 		return $this->me;
 	}
+
 	#Essa função rertona quando o aluno tem que tirar na diciplina e integrada para passar.
-	public function falta(){
+	public function calcularMin(){
 		$m2 = 0;
 		while(true){
-			$n = $this->calculaMedia($m2);
-			if($n >= 5.00){
-				return number_format($m2,1);
+			$n = $this->calculaMe($m2);
+			if($n == 5.0){
+				return number_format($m2,2);
 			}
 			$m2 = $m2 + 0.01;
 		}
 		return $m2;
 	}
 
-	public function faltaIntegrada(){
+	public function calcularMinIntegrada(){
 		$ni = 0;
 		while(true){
 			$m2 = number_format((($this->nd * 0.70 )+( $ni * 0.30)),2);
@@ -79,7 +76,7 @@ class Calculo{
 		return $ni;
 	}
 
-	public function faltaDiciplina(){
+	public function calcularMinDiciplina(){
 		$nd = 0;
 		while(true){
 			$m2 = number_format((($nd * 0.70 )+( $this->ni * 0.30)),2);
@@ -92,7 +89,7 @@ class Calculo{
 		return $nd;
 	}
 
-	public function status(){
+	public function mostrarStatus(){
 		if($this->me >= 5){
 			$s = "Aprovado";
 		}elseif(($this->me >= 3) && ($this->me <= 4.9)){
@@ -102,16 +99,5 @@ class Calculo{
 		}
 		return $s;
 	}
-
-	public function mostra(){
-		echo "M1: ".$this->getM1()."</br>";
-		echo "Diciplina: ".$this->getNd()."</br>";
-		echo "Integrada: ".$this->getNi()."</br>";
-		echo "M2: ".$this->getM2()."</br>";
-		echo "Media: ".$this->getMedia()."</br>";
-		echo "Nota minima*: ".$this->falta()."</br>";
-		echo "Status Aluno: ".$this->Status()."</br>";
-	}
-
-}#fim da classe Calculo.
+}
 ?>
